@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 # Hardcoded credentials (security issue)
 USERNAME = "admin"
-PASSWORD = os.getnenv("APP_PASSWORD")
+PASSWORD = os.getenv("APP_PASSWORD")
 
 @app.route("/")
 def home():

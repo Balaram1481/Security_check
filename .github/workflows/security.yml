@@ -39,4 +39,4 @@ jobs:
           cmd_options: '-J report.json -w report.md -r report.html'
           allow_issue_writting: false
       - name: Fix permissions
-        run: chmod -R 777
+        run: chmod -R 777 .

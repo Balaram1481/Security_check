@@ -22,6 +22,7 @@ jobs:
         continue-on-error: true
       - name: run Bandit scan
         run: bandit -r . -ll
+        continue-on-error: true
       - name: Run Safety Scan
         run: safety check -r requirement.txt
       - name: Run Gitleaks

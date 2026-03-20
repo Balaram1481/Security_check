@@ -26,3 +26,11 @@ jobs:
         run: safety check -r requirement.txt
       - name: Run Gitleaks
         uses: gitleaks/gitleaks-action@v2
+      - name: Start Application
+        run: |
+          nohup python app2.py &
+          sleep 10
+      - name: Run ZAP Scan
+        uses: zaproxy/actions-baseline@v0.10.0
+        with:
+          target: 'http://localhost:5000'
